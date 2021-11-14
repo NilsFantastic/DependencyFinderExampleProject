@@ -27,3 +27,8 @@ It makes use of the [EditorApplication.hierarchyChanged](https://docs.unity3d.co
 ## How to install
 Checkout this project and copy the folder called DependencyFinder to anywhere inside your Assets folder. A good practice is to put it in the Plugins-folder.
 
+## When to use
+For small to medium sized projects, makes the greatest impact for a project when working in a small team.
+
+## Limitations
+Does not work for scene references for objects that are added to the scene during runtime since DependencyFinder runs in the editor.
