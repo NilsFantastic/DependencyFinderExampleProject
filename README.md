@@ -5,11 +5,17 @@ A simple dependency injection tool for unity. It works by automating the manual 
 When fields get accidentally unreferenced they will automatically be re-referenced. Another great aspect is that when adding a new field to an already existing component there is no need to commit the scene it's on since the reference will automatically be picked up by the other developer's editor.
 
 ## Code example
+It's possible to use both private and public fields. Here's an example using private with [SerializeField]
+
 ```csharp
 [SerializeField, FromScene] private SceneDependency1 _dependency1;
 [SerializeField, FromScene] private SceneDependency2 _sceneDependency2;
 [SerializeField, FromPrefab] private PrefabDependency _prefabDependency;
 ```
+- _sceneDependency1 will be populated with a component from the scene of type SceneDependency1
+- _sceneDependency2 will be populated with a component from the scene of type SceneDependency2
+- _prefabDependency will be populated with a component from the assets folder of type PrefabDependency
+
 
 ## The logic of the available attributes
 
@@ -32,3 +38,4 @@ For small to medium sized projects, makes the greatest impact for a project when
 
 ## Limitations
 Does not work for scene references for objects that are added to the scene during runtime since DependencyFinder runs in the editor.
+Important to know that this is not used for Inversion Of Control but rather to make development a bit easier and to keep object references intact
