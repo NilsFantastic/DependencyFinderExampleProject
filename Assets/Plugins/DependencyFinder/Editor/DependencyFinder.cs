@@ -15,6 +15,8 @@ public class DependencyFinder
     }
     private static void HierarchyWindowChanged()
     {
+        if (Application.isPlaying)
+            return;
         var activeScene = SceneManager.GetActiveScene();
         var gameObjects = activeScene.GetRootGameObjects();
         foreach (var go in gameObjects)
