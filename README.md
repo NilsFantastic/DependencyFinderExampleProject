@@ -2,6 +2,8 @@
 
 A simple dependency injection tool for unity. It works by automating the manual work of referencing objects in the hierarchy. Therefore it can run at editor runtime and will not affect runtime performance of your game.
 
+Dependency finder will not work during runtime so objects added With [Instantiate](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html) or new GameObject().AddComponent<YourScript> will not be set.
+
 When fields get accidentally unreferenced they will automatically be re-referenced. Another great aspect is that when adding a new field to an already existing component there is no need to commit the scene it's on since the reference will automatically be picked up by the other developer's editor.
 
 ## Code example
