@@ -10,7 +10,7 @@ When fields get accidentally unreferenced they will automatically be re-referenc
 It's possible to use both private and public fields. Here's an example using private with [SerializeField]
 
 ```csharp
-[SerializeField, FromScene] private SceneDependency1 _dependency1;
+[SerializeField, FromScene] private SceneDependency1 _scenedependency1;
 [SerializeField, FromScene] private SceneDependency2 _sceneDependency2;
 [SerializeField, FromPrefab] private PrefabDependency _prefabDependency;
 ```
